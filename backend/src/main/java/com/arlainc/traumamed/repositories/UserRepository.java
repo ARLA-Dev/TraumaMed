@@ -1,6 +1,6 @@
-package com.arlainc.femisys.repositories;
+package com.arlainc.traumamed.repositories;
 
-import com.arlainc.femisys.models.Usuario;
+import com.arlainc.traumamed.models.Usuario;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import java.util.Optional;

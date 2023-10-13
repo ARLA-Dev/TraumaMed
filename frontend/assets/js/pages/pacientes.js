@@ -176,7 +176,7 @@ function updatePagination() {
 }
 
 // Realizar la llamada fetch al endpoint api/pacientes
-fetch("http://localhost:8080/api/pacientes", {
+fetch("http://localhost:9090/api/pacientes", {
   method: "GET",
   headers: {
     Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -245,7 +245,7 @@ function eliminarPaciente(cedula) {
   }).then((result) => {
     if (result.isConfirmed) {
       // Realizar la llamada fetch al endpoint correspondiente para eliminar el paciente
-      fetch(`http://localhost:8080/api/pacientes/borrar/${cedula}`, {
+      fetch(`http://localhost:9090/api/pacientes/borrar/${cedula}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${sessionStorage.getItem("token")}`,

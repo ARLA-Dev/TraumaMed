@@ -15,8 +15,8 @@
     "electron-builder": "^24.6.4"
   },
   "build": {
-    "appId": "com.example.femisys",
-    "productName": "Femisys",
+    "appId": "com.example.traumamed",
+    "productName": "Traumamed",
     "directories": {
       "output": "dist"
     },

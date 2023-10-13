@@ -1,10 +1,7 @@
-package com.arlainc.femisys.controllers;
+package com.arlainc.traumamed.controllers;
 
-import com.arlainc.femisys.models.Paciente;
-import com.arlainc.femisys.models.Usuario;
-import com.arlainc.femisys.services.PacienteService;
-import com.arlainc.femisys.services.PacienteServiceImpl;
-import com.arlainc.femisys.services.UsuarioServiceImpl;
+import com.arlainc.traumamed.models.Paciente;
+import com.arlainc.traumamed.services.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 @RestController
 public class PacienteController {

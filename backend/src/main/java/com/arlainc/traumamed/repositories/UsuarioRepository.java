@@ -1,7 +1,6 @@
-package com.arlainc.femisys.repositories;
+package com.arlainc.traumamed.repositories;
 
-import com.arlainc.femisys.models.Paciente;
-import com.arlainc.femisys.models.Usuario;
+import com.arlainc.traumamed.models.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Repository;

@@ -9,7 +9,7 @@ barra_header.innerHTML =
           <i class="fas fa-user-md"></i>
         </div>
 
-        <span class="b-title">FemiSys</span>
+        <span class="b-title">TraumaMed</span>
       </a>
   </div>
 
@@ -28,7 +28,7 @@ barra_header.innerHTML =
             <div class="pro-head">
 
               <img
-                src="assets/images/user/avatar-${ sessionStorage.getItem("nombre") == "Arla Inc Tech" ? "2" : "1"}.jpg"
+                src="assets/images/user/avatar-${ sessionStorage.getItem("nombre") == "Arla Inc Tech" ? "2" : "2"}.jpg"
                 class="img-radius"
                 alt="User-Profile-Image"
               />

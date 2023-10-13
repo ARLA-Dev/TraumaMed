@@ -1,7 +1,7 @@
-package com.arlainc.femisys.services;
+package com.arlainc.traumamed.services;
 
-import com.arlainc.femisys.models.Usuario;
-import com.arlainc.femisys.repositories.UserRepository;
+import com.arlainc.traumamed.models.Usuario;
+import com.arlainc.traumamed.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

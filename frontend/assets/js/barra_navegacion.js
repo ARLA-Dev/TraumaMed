@@ -9,7 +9,7 @@ barra_navegacion.innerHTML =
             <div class="b-bg">
               <i class="fas fa-user-md"></i>
             </div>
-            <span class="b-title" style="font-size: 30px;">FemiSys</span>
+            <span class="b-title" style="font-size: 30px;">TraumaMed</span>
           </a>
         </div>
 

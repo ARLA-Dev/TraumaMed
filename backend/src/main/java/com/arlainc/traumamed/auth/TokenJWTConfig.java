@@ -1,4 +1,4 @@
-package com.arlainc.femisys.auth;
+package com.arlainc.traumamed.auth;
 
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;

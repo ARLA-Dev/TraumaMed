@@ -1,4 +1,4 @@
-package com.arlainc.femisys.models;
+package com.arlainc.traumamed.models;
 
 import lombok.Data;
 

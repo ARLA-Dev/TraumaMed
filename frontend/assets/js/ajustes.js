@@ -20,7 +20,7 @@ const i_nombre = document.getElementById("i_nombre");
 const selectElement = document.getElementById('s_pregunta');
 
 
-fetch('http://localhost:8080/api/usuarios/current', {
+fetch('http://localhost:9090/api/usuarios/current', {
   method: 'GET',
   headers: {
     'Authorization': `Bearer ${sessionStorage.getItem('token')}`
@@ -68,7 +68,7 @@ fetch('http://localhost:8080/api/usuarios/current', {
       return; // Detener la ejecución si hay campos vacíos
     }
   
-    fetch('http://localhost:8080/api/usuarios/current', {
+    fetch('http://localhost:9090/api/usuarios/current', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

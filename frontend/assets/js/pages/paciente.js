@@ -18,7 +18,7 @@ const fechaHoy = new Date().toISOString().split('T')[0];
 document.getElementById('i_fnac').max = fechaHoy;
 
 function obtenerConsultasPaciente(cedula) {
-  fetch(`http://localhost:8080/api/consultas/${cedula}`, {
+  fetch(`http://localhost:9090/api/consultas/${cedula}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -204,7 +204,7 @@ function obtenerConsultasPaciente(cedula) {
 }
 
 function obtenerDatosPaciente(cedula) {
-  fetch(`http://localhost:8080/api/pacientes/${cedula}`, {
+  fetch(`http://localhost:9090/api/pacientes/${cedula}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -230,6 +230,7 @@ function obtenerDatosPaciente(cedula) {
       document.getElementById("i_email").value = data.email;
       document.getElementById("s_edocivil").value = data.estado_civil;
       document.getElementById("ta_antecedentes").value = data.antecedentes;
+      document.getElementById("s_sexo").value = data.sexo;
 
       const agregarConsultaLink = document.querySelector(
         "#agregarConsultaEnlace"
@@ -269,7 +270,7 @@ modificarBtn.addEventListener("click", () => {
   const estadoCivil = document.getElementById("s_edocivil").value;
   const nacionalidad = document.getElementById("s_nacionalidad").value;
   const antecedentes = document.getElementById("ta_antecedentes").value;
-  const sexo = "Femenino";
+  const sexo = document.getElementById("s_sexo").value;
   const email = document.getElementById("i_email").value;
 
   if (
@@ -342,7 +343,7 @@ modificarBtn.addEventListener("click", () => {
   }
 
 
-  fetch(`http://localhost:8080/api/pacientes/${cedula}`, {
+  fetch(`http://localhost:9090/api/pacientes/${cedula}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -388,7 +389,7 @@ modificarBtn.addEventListener("click", () => {
 
 function mostrarModalDocumentos(idConsulta) {
 
-  fetch(`http://localhost:8080/api/consultas/detalle/${idConsulta}`, {
+  fetch(`http://localhost:9090/api/consultas/detalle/${idConsulta}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${sessionStorage.getItem("token")}`,

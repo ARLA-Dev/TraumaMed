@@ -14,7 +14,7 @@ login_btn.addEventListener("click", async function (event) {
   }
 
   try {
-    const response = await fetch("http://localhost:8080/login", {
+    const response = await fetch("http://localhost:9090/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ login_btn.addEventListener("click", async function (event) {
 
 async function obtenerNombre(token) {
   try {
-    const response = await fetch('http://localhost:8080/api/usuarios/current', {
+    const response = await fetch('http://localhost:9090/api/usuarios/current', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`

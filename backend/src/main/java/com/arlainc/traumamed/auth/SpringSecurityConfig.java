@@ -1,7 +1,7 @@
-package com.arlainc.femisys.auth;
+package com.arlainc.traumamed.auth;
 
-import com.arlainc.femisys.auth.filters.JwtAuthenticationFilter;
-import com.arlainc.femisys.auth.filters.JwtValidationFilter;
+import com.arlainc.traumamed.auth.filters.JwtAuthenticationFilter;
+import com.arlainc.traumamed.auth.filters.JwtValidationFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -48,17 +48,22 @@ public class SpringSecurityConfig {
     }
 
     @Bean
-    CorsConfigurationSource corsConfigurationSource() {
+    CorsConfigurationSource corsConfigurationSource(){
+
         CorsConfiguration config = new CorsConfiguration();
 
-        // Permitir todos los orígenes para Electron
-        config.addAllowedOrigin("*"); // Esto es para desarrollo, asegúrate de ajustarlo para producción
+        config.setAllowedOrigins(Arrays.asList(
+                "http://localhost:5500",
+                "http://127.0.0.1:5500",
+                "http://[::1]:5500"
+        ));
 
         config.setAllowedMethods(Arrays.asList("GET", "POST", "DELETE", "PUT"));
         config.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
         config.setAllowCredentials(true);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+
         source.registerCorsConfiguration("/**", config);
 
         return source;

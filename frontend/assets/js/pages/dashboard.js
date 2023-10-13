@@ -72,7 +72,7 @@ function getToken() {
   // Función para obtener los datos de los endpoints y actualizar los elementos HTML
   function obtenerDatos() {
     // Endpoint para obtener el total de pacientes registrados
-    fetch("http://localhost:8080/api/pacientes/total", {
+    fetch("http://localhost:9090/api/pacientes/total", {
       headers: {
         Authorization: getToken(),
       },
@@ -87,7 +87,7 @@ function getToken() {
       .catch((error) => console.error("Error:", error));
 
     // Endpoint para obtener el total de consultas totales
-    fetch("http://localhost:8080/api/consultas/total", {
+    fetch("http://localhost:9090/api/consultas/total", {
       headers: {
         Authorization: getToken(),
       },
@@ -102,7 +102,7 @@ function getToken() {
       .catch((error) => console.error("Error:", error));
 
     // Endpoint para obtener el total de consultas de este año
-    fetch("http://localhost:8080/api/consultas/total/anual", {
+    fetch("http://localhost:9090/api/consultas/total/anual", {
       headers: {
         Authorization: getToken(),
       },
@@ -117,7 +117,7 @@ function getToken() {
       .catch((error) => console.error("Error:", error));
 
 // Endpoint para obtener los datos de consultas mensuales
-fetch("http://localhost:8080/api/consultas/total/anual/mensual", {
+fetch("http://localhost:9090/api/consultas/total/anual/mensual", {
   headers: {
     Authorization: getToken(),
   },

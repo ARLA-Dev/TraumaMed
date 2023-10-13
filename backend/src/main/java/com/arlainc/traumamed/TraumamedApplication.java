@@ -1,13 +1,13 @@
-package com.arlainc.femisys;
+package com.arlainc.traumamed;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FemisysApplication {
+public class TraumamedApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FemisysApplication.class, args);
+		SpringApplication.run(TraumamedApplication.class, args);
 	}
 
 }

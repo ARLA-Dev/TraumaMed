@@ -1,6 +1,6 @@
-package com.arlainc.femisys.services;
+package com.arlainc.traumamed.services;
 
-import com.arlainc.femisys.models.Consulta;
+import com.arlainc.traumamed.models.Consulta;
 import java.util.List;
 
 public interface ConsultaService {

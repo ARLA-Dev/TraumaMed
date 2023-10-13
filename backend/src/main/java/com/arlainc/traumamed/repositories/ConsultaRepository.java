@@ -1,6 +1,6 @@
-package com.arlainc.femisys.repositories;
+package com.arlainc.traumamed.repositories;
 
-import com.arlainc.femisys.models.Consulta;
+import com.arlainc.traumamed.models.Consulta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ConsultaRepository extends JpaRepository<Consulta, Long> {
 
-    @Query("SELECT new com.arlainc.femisys.models.ConsultaPacienteDTO(c.cedula, c.id, c.peso, c.fecha, p.paciente, p.nacionalidad) " +
+    @Query("SELECT new com.arlainc.traumamed.models.ConsultaPacienteDTO(c.cedula, c.id, c.peso, c.fecha, p.paciente, p.nacionalidad) " +
             "FROM Consulta c JOIN Paciente p ON c.cedula = p.cedula " +
             "ORDER BY c.id DESC, c.fecha DESC")
     List<Object[]> findAllOrderByFechaDescWithPaciente();

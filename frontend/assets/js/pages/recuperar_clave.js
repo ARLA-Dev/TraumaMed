@@ -13,7 +13,7 @@ lupa.addEventListener('click', function (event) {
     return; // Detener la ejecución si hay campos vacíos
   }
 
-  fetch('http://localhost:8080/api/usuarios/recuperar_clave/' + username, {
+  fetch('http://localhost:9090/api/usuarios/recuperar_clave/' + username, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -63,7 +63,7 @@ recuperar_btn.addEventListener('click', function (event) {
     return; // Detener la ejecución si hay campos vacíos
   }
 
-  fetch('http://localhost:8080/api/usuarios/recuperar_clave/' + username, {
+  fetch('http://localhost:9090/api/usuarios/recuperar_clave/' + username, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',

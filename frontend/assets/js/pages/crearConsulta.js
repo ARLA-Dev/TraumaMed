@@ -7,7 +7,7 @@ const numConsultaElement = document.getElementById("h6_numConsulta");
 async function obtenerDatosPaciente(cedula) {
   try {
     const response = await fetch(
-      `http://localhost:8080/api/pacientes/${cedula}/consulta`,
+      `http://localhost:9090/api/pacientes/${cedula}/consulta`,
       {
         method: "GET",
         headers: {
@@ -119,7 +119,7 @@ guardarBtn.addEventListener("click", async function (event) {
 
   try {
     // Realiza una solicitud POST al servidor con los datos de la consulta
-    const response = await fetch("http://localhost:8080/api/consultas", {
+    const response = await fetch("http://localhost:9090/api/consultas", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

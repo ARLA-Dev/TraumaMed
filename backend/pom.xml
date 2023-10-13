@@ -9,11 +9,11 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.arlainc</groupId>
-	<artifactId>femisys</artifactId>
+	<artifactId>traumamed</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>femisys</name>
-	<description>API Rest para la Dra Yuleima Pérez</description>
+	<name>traumamed</name>
+	<description>API Rest para el Dr Johnny Ortega</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>

@@ -1,7 +1,7 @@
-package com.arlainc.femisys.services;
+package com.arlainc.traumamed.services;
 
-import com.arlainc.femisys.models.Consulta;
-import com.arlainc.femisys.repositories.ConsultaRepository;
+import com.arlainc.traumamed.models.Consulta;
+import com.arlainc.traumamed.repositories.ConsultaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

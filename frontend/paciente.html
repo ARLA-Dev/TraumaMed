@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="author" content="Arla-Inc" />
-    <title>FemiSys - Paciente</title>
+    <title>TraumaMed - Paciente</title>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" /> <!-- fontawesome icon -->
     <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css" /> <!-- animation css -->
@@ -71,14 +71,24 @@
                           <input placeholder="Nombre..." value="" type="text" id="i_nombre" class="form-control" required />
                         </div>
                       </div>
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="s_sexo" class="form-label">Sexo</label>
+                          <select id="s_sexo" class="form-control">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                          </select>
+                        </div>
+                      </div>
                       
                      
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="s_nacionalidad" class="form-label">Nacionalidad</label>
                           <select id="s_nacionalidad" class="form-control">
-                            <option>Venezolana</option>
-                            <option>Extranjera</option>
+                            <option>Venezolano(a)</option>
+                            <option>Extranjero(a)</option>
                           </select>
                         </div>
                       </div>
@@ -115,10 +125,10 @@
                         <div class="form-group">
                           <label for="s_edocivil" class="form-label">Estado Civil</label>
                           <select id="s_edocivil" class="form-control">
-                            <option>Soltera</option>
-                            <option>Casada</option>
-                            <option>Viuda</option>
-                            <option>Divorciada</option>
+                            <option>Soltero(a)</option>
+                            <option>Casado(a)</option>
+                            <option>Viudo(a)</option>
+                            <option>Divorciado(a)</option>
                           </select>
                         </div>
                       </div>

@@ -1,4 +1,4 @@
-package com.arlainc.femisys.models;
+package com.arlainc.traumamed.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

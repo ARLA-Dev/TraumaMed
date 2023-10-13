@@ -165,7 +165,7 @@ function updatePagination() {
 }
 
 // Realizar la llamada fetch al endpoint api/consultas
-fetch("http://localhost:8080/api/consultas", {
+fetch("http://localhost:9090/api/consultas", {
   method: "GET",
   headers: {
     Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -226,7 +226,7 @@ function filtrarconsultas() {
 //Métdo para mostrar el modal de la nota evolutiva
 function mostrarModalNotaEvolutiva(idConsulta) {
 
-  fetch(`http://localhost:8080/api/consultas/nota/${idConsulta}`, {
+  fetch(`http://localhost:9090/api/consultas/nota/${idConsulta}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${sessionStorage.getItem("token")}`,
@@ -276,7 +276,7 @@ function setIdConsulta(id) {
 //Métdo para mostrar el modal de recipe e indicaciones
 function mostrarModalDocumentos(idConsulta) {
 
-  fetch(`http://localhost:8080/api/consultas/detalle/${idConsulta}`, {
+  fetch(`http://localhost:9090/api/consultas/detalle/${idConsulta}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${sessionStorage.getItem("token")}`,

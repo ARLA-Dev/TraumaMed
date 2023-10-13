@@ -1,7 +1,7 @@
-package com.arlainc.femisys.controllers;
+package com.arlainc.traumamed.controllers;
 
-import com.arlainc.femisys.models.Consulta;
-import com.arlainc.femisys.services.ConsultaService;
+import com.arlainc.traumamed.models.Consulta;
+import com.arlainc.traumamed.services.ConsultaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

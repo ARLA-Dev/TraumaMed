@@ -1,6 +1,6 @@
-package com.arlainc.femisys.services;
+package com.arlainc.traumamed.services;
 
-import com.arlainc.femisys.models.Paciente;
+import com.arlainc.traumamed.models.Paciente;
 import java.util.List;
 import java.util.Map;
 

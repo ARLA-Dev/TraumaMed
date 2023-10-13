@@ -26,7 +26,7 @@ guardarBtn.addEventListener('click', async function(event) {
   let email = document.getElementById('i_email').value.toUpperCase();
   const estadoCivil = document.getElementById('s_edocivil').value;
   const antecedentes = document.getElementById('ta_antecedentes').value.toUpperCase();
-  const sexo = 'Femenino';
+  const sexo = document.getElementById('s_sexo').value;
 
   // Verificar si algún campo está vacío
   if (
@@ -103,7 +103,7 @@ guardarBtn.addEventListener('click', async function(event) {
     email = email.trim() === '' ? "NT" : email;
 
     // Realiza una solicitud POST al servidor con los datos del paciente
-    const response = await fetch('http://localhost:8080/api/pacientes', {
+    const response = await fetch('http://localhost:9090/api/pacientes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

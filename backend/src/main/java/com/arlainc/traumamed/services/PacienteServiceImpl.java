@@ -1,7 +1,7 @@
-package com.arlainc.femisys.services;
+package com.arlainc.traumamed.services;
 
-import com.arlainc.femisys.models.Paciente;
-import com.arlainc.femisys.repositories.PacienteRepository;
+import com.arlainc.traumamed.models.Paciente;
+import com.arlainc.traumamed.repositories.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

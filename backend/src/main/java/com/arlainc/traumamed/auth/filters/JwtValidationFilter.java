@@ -1,4 +1,4 @@
-package com.arlainc.femisys.auth.filters;
+package com.arlainc.traumamed.auth.filters;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Claims;
@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
 import java.io.IOException;
 import java.util.*;
 
-import static com.arlainc.femisys.auth.TokenJWTConfig.*;
+import static com.arlainc.traumamed.auth.TokenJWTConfig.*;
 
 public class JwtValidationFilter extends BasicAuthenticationFilter {
 

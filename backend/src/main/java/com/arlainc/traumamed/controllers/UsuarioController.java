@@ -1,10 +1,9 @@
-package com.arlainc.femisys.controllers;
+package com.arlainc.traumamed.controllers;
 
-import com.arlainc.femisys.models.Usuario;
-import com.arlainc.femisys.services.UsuarioServiceImpl;
+import com.arlainc.traumamed.models.Usuario;
+import com.arlainc.traumamed.services.UsuarioServiceImpl;
 import io.jsonwebtoken.Jwts;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.arlainc.femisys.auth.TokenJWTConfig.SECRET_KEY;
+import static com.arlainc.traumamed.auth.TokenJWTConfig.SECRET_KEY;
 
 @RestController
 public class UsuarioController {
