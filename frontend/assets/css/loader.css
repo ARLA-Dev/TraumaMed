@@ -16,7 +16,7 @@
 }
 .loader:before, .loader:after{
 	content: '';
-	border: 1em solid #fb6f92;
+	border: 1em solid #3d3c3b;
 	border-radius: 50%;
 	width: inherit;
 	height: inherit;

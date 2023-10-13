@@ -141,7 +141,7 @@ fetch("http://localhost:9090/api/consultas/total/anual/mensual", {
       barGap: 3,
       resize: true,
       responsive: true,
-      barColors: ["0-#c8b6ff-#9c89b8"],
+      barColors: ["0-#487aa1-#7c8071"],
     });
   })
   .catch((error) => console.error("Error:", error));
