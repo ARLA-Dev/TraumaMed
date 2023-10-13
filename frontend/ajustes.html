@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Arla-Inc" />
+    <title>FemiSys - Ajustes</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" /> <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css" /> <!-- animation css -->
+    <link rel="stylesheet" href="assets/css/style.css" /> <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/plugins/SWAL/sweetalert2.min.css">
+  </head>
+  
+  <body>
+    <!--Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!--FIN Loader -->
+    
+    <!--BARRA DE NAVEGACIÓN -->
+    <div id="barra_navegacion"></div>
+    <!--FIN BARRA DE NAVEGACIÓN -->
+
+    <!--BARRA DE NAVEGACIÓN HEADER-->
+    <header
+      class="navbar pcoded-header navbar-expand-lg navbar-light"
+      id="barra_header"
+    ></header>
+    <!--FIN BARRA DE NAVEGACIÓN HEADER-->
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="pcoded-main-container">
+      <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+          <div class="page-header">
+            <div class="page-block">
+              <div class="row align-items-center">
+                <div class="col-md-12">
+                  <div class="page-header-title">
+                    <h3 class="m-b-10">Ajustes</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-body">
+            <div class="page-wrapper">
+              <div class="row">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+
+                          <form method="get">
+
+                            <div class="form-group">
+
+                              <label for="i_usuario" class="form-label">Usuario</label>
+                              <input
+                                disabled
+                                type="text"
+                                id="i_usuario"
+                                class="form-control"
+                              />
+                            </div>
+
+                            <div class="form-group">
+                              <label
+                                for="exampleForm.ControlSelect1"
+                                class="form-label"
+                                >Pregunta de Seguridad</label
+                              >
+                              <select id="s_pregunta" class="form-control">
+                                <option>¿Cuál es su color favorito?</option>
+                                <option>¿Cómo se llamó su primera mascota?</option>
+                                <option>¿Donde fue su luna de miel?</option>
+                                <option>¿Cual fue la Marca de su primer auto?</option>
+                                <option>¿Mejor amigo de la infancia?</option>
+                                <option>¿Libro favorito?</option>
+                                <option>¿Película favorita?</option>
+                              </select>
+                            </div>
+
+                            <div class="form-group">
+                              <label for="o_pass" class="form-label">Contraseña Actual <small class="font-weight-bold">(requerida)</small></label>
+                              <input
+                                placeholder="Contraseña"
+                                type="password"
+                                id="o_pass"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            
+                            <div class="form-group">
+                              <label for="i_nombre" class="form-label">Nombre</label>
+                                <input
+                                disabled
+                                type="text"
+                                id="i_nombre"
+                                class="form-control"
+                                />
+                            </div>
+
+                            <div class="form-group">
+                              <label>Respuesta de Seguridad <small class="font-weight-bold">(requerida)</small></label>
+                              <div class="input-group" id="show_hide_respuesta">
+                                <input class="form-control" type="password" id="respuesta" placeholder="Respuesta">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                    <a href=""><i class="fas fa-eye-slash color-m" aria-hidden="true"></i></a>
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="form-group">
+                              <label>Nueva Contraseña</label>
+                              <div class="mb-3 input-group">
+                                <input aria-label="Text input with checkbox" id="n_pass" class="form-control" placeholder="Nueva Contraseña">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="width: 54.5px; text-align: center; padding: 0; display: flex; align-items: center; justify-content: center;">
+                                    <input type="checkbox" aria-label="Checkbox for following text input" id="ck">
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="boton-ajustes col-md-12 text-right">
+                            <button type="button" id="btnGuardar" class="btn theme-bg text-white btn-p-g m-0">
+                              Guardar
+                            </button>
+                          </div>
+
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    <!-- FIN CONTENEDOR PRINCIPAL -->
+
+    <!-- JS REQUERIDO -->
+    <script src="assets/plugins/SWAL/sweetalert2.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script>
+      var pagina = "ajustes";
+    </script>
+    <script src="assets/js/barra_navegacion.js"></script>
+    <script src="assets/js/barra_header.js"></script>
+    <script src="assets/js/ajustes.js"></script>
+    <script>
+      setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+      }, 1000);
+    </script>
+    <!-- FIN JS REQUERIDO -->
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Arla-Inc" />
+    <title>FemiSys - Pacientes</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" /> <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css" /> <!-- animation css -->
+    <link rel="stylesheet" href="assets/css/style.css" /> <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/plugins/SWAL/sweetalert2.min.css">
+  </head>
+
+  <body>
+    <!--Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!--FIN Loader -->
+    
+    <!--BARRA DE NAVEGACIÓN -->
+    <div id="barra_navegacion"></div>
+    <!--FIN BARRA DE NAVEGACIÓN -->
+
+   <!--BARRA DE NAVEGACIÓN HEADER-->
+   <header class="navbar pcoded-header navbar-expand-lg navbar-light" id="barra_header"></header>
+   <!--FIN BARRA DE NAVEGACIÓN HEADER-->
+
+    <!--CONTENEDOR PRINCIPAL-->
+    <div class="pcoded-main-container">
+      <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+          <div class="page-header">
+            <div class="page-block">
+              <div class="row align-items-center">
+                <div class="col-md-12">
+                  <div class="page-header-title">
+                    <h3 class="m-b-10">Pacientes</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-body">
+            <div class="page-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+              
+                    <!--PRIMERA FILA-->
+              
+                    <div class="col-md-6 mt-3">
+                      <div class="form-group">
+                        <label>Filtrar:</label>
+                        <div class="mb-3 input-group">
+                          <input aria-label="Text input with checkbox" class="form-control" placeholder="Ingrese la cédula o nombre del paciente" type="text">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              style="width: 54.5px; text-align: center; padding: 0; display: flex; align-items: center; justify-content: center;">
+                              <i class="fa fa-search"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+              
+                    <div class="col-md-6 mt-3">
+
+                      <form action="crearPaciente.html" method="get">
+
+                        <div class="form-group">
+                          <label style="color: transparent !important;">Agregar Paciente</label> <br>
+                          <div class="mb-3 input-group" style="display: flex; align-items: center; justify-content: right;  background-color: transparent !important;">
+                            <button type="submit" class="btn theme-bg text-white btn-p-g"><i class="fa fa-plus"></i>Agregar Paciente</button>
+                          </div>
+                        </div>
+
+                      </form>
+                    </div>
+              
+                    <!--FIN PRIMERA FILA-->
+
+                    <!--TABLA DE PACIENTES-->
+              
+                    <div class="col-md-12">
+                      <div class="table-responsive">
+                        <table class="table table-hover text-center">
+                          <thead>
+                            <tr>
+                              <th>Cédula</th>
+                              <th>Nombre Completo</th>
+                              <th>Teléfono</th>
+                              <th>Email</th>
+                              <th>Fecha de Nacimiento<br></th>
+                              <th>Edad</th>
+                              <th>Nacionalidad</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <!--FIN TABLA DE PACIENTES-->
+
+                    <div class="pagination-container-wrapper mt-4">
+                      <div class="pagination-container">
+                        <ul class="pagination pagination-sm flex-wrap justify-content-center align-content-center"></ul>
+                      </div>
+                    </div>
+                  
+                  </div>
+                </div>
+
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+      
+    </div>
+    <!--FIN CONTENEDOR PRINCIPAL-->
+
+    <!-- JS REQUERIDO -->
+    <script src="assets/plugins/SWAL/sweetalert2.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script>var pagina = "pacientes";</script>
+    <script src="assets/js/barra_navegacion.js"></script>
+    <script src="assets/js/barra_header.js"></script>
+    <script src="assets/js/pages/pacientes.js"></script>
+    <script>
+      setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+      }, 1000);
+    </script>
+    <!-- FIN JS REQUERIDO -->
+    
+  </body>
+</html>

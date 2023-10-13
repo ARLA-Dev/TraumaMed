@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Arla-Inc" />
+  <title>FemiSys - Dashboard</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
+  <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" /> <!-- fontawesome icon -->
+  <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css" /> <!-- animation css -->
+  <link rel="stylesheet" href="assets/plugins/chart-morris/css/morris.css" /> <!-- morris css -->
+  <link rel="stylesheet" href="assets/css/style.css" /> <!-- main style css -->
+  <link rel="stylesheet" href="assets/css/index.css" /> <!-- main style css -->
+  <link rel="stylesheet" href="assets/css/loader.css">
+</head>
+
+<body>
+  <!--Loader -->
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
+  <!--FIN Loader -->
+
+  <!--BARRA DE NAVEGACIÓN -->
+  <div id="barra_navegacion"></div>
+  <!--FIN BARRA DE NAVEGACIÓN -->
+
+  <!--BARRA DE NAVEGACIÓN HEADER-->
+  <header class="navbar pcoded-header navbar-expand-lg navbar-light" id="barra_header"></header>
+  <!--FIN BARRA DE NAVEGACIÓN HEADER-->
+
+  <!--CONTENEDOR PRINCIPAL-->
+  <div class="pcoded-main-container">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h3 class="m-b-10">Dashboard</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="row">
+
+              <!--HORA Y FECHA-->
+              <div class="col-sm-12">
+                <div class="card card-social">
+                  <div class="card-block border-bottom">
+                    <div class="row align-items-center justify-content-center">
+                      <div class="col-auto">
+                        <i class="fa fa-clock text-c-green f-36"></i>
+                      </div>
+                      <div class="col text-right">
+                        <h3 id="hora" class="hora">00:00:00 AM</h3>
+                        <h5 class="text-c-blue mb-0 dia">
+                          Domingo <span class="text-muted dia-numero">02</span>
+                        </h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-block">
+                    <div class="row align-items-center justify-content-center card-active">
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10 tamano mes">
+                          <span class="text-muted m-r-5 tamano">Mes:</span>Abril
+                        </h6>
+                      </div>
+                      <div class="col-6">
+                        <h6 class="text-center m-b-10 tamano anio">
+                          <span class="text-muted m-r-5 tamano">Año:</span>2023
+                        </h6>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--FIN HORA Y FECHA-->
+
+              <!------PRIMERAS GRÁFICAS-->
+              <div class="col-xl-4 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Pacientes Registrados</h5>
+                    <div class="row d-flex align-items-center">
+                      <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0 pacientes-registrados">
+                          <i class="fa fa-users text-c-green f-30 m-r-5"></i>
+                          <span id="pacientesRegistradosValue"></span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Consultas Totales</h5>
+                    <div class="row d-flex align-items-center">
+                      <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0 consultas-totales">
+                          <i class="fa fa-notes-medical text-c-green f-30 m-r-5"></i>
+                          <span id="consultasTotalesValue"></span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="mb-4">Consultas de Este Año</h5>
+                    <div class="row d-flex align-items-center">
+                      <div class="col-9">
+                        <h3 class="f-w-300 d-flex align-items-center m-b-0 consultas-anuales">
+                          <i class="fa fa-calendar text-c-green f-30 m-r-5"></i>
+                          <span id="consultasAnualesValue"></span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!------FIN PRIMERAS GRÁFICAS-->
+
+              <!------SEGUNDA GRÁFICAS-->
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Consultas del Último Año</h5>
+                  </div>
+                  <div class="card-block">
+                    <div id="morris-bar-stacked-chart" style="height: 450px"></div>
+                  </div>
+                </div>
+              </div>
+              <!------FIN SEGUNDA GRÁFICAS-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--FIN CONTENEDOR PRINCIPAL-->
+
+  <!-- JS REQUERIDO -->
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/vendor-all.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/pcoded.min.js"></script>
+  <script src="assets/plugins/chart-morris/js/raphael.min.js"></script>
+  <script src="assets/plugins/chart-morris/js/morris.min.js"></script>
+  <script> var pagina = "index";</script>
+  <script src="assets/js/barra_navegacion.js"></script>
+  <script src="assets/js/barra_header.js"></script>
+  <script src="assets/plugins/jquery2/jquery.min.js"></script>
+  <script src="assets/js/pages/dashboard.js"></script>
+  <script>
+    setTimeout(function () {
+      $('.loader_bg').fadeToggle();
+    }, 1000);
+  </script>
+  <!-- FIN JS REQUERIDO -->
+</body>
+
+</html>

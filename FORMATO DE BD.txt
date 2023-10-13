@@ -1,0 +1,15 @@
+UPDATE paciente
+SET direccion = REPLACE(direccion, ' OF HOGAR', '')
+WHERE direccion LIKE '% OF HOGAR%';
+
+UPDATE paciente
+SET direccion = REPLACE(direccion, ' OF  HOGAR', '')
+WHERE direccion LIKE '% OF  HOGAR%';
+
+Cambiar BQTO por Barquisimeto
+
+Colocar femenino Venezolano -> Venezolana
+
+Colocar NT cuando no hay datos
+
+Borrar pesos con más de 3 dígitos

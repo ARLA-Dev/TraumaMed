@@ -1,0 +1,739 @@
+{
+	"info": {
+		"_postman_id": "9d448f63-49ed-44fa-be2f-6486f1c82f90",
+		"name": "FemiSys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26828048"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NDc4NjU1OX0.N4qn1Q3Qh5Lyo3HDqWzgJxnmV4x7xa-W34p4kSTG_fo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Paciente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NzgwMjg3MX0.zR8Z-Qhpxdd9ZHqJSgyPX4_INkEh3kKgJjy2JiudNN0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"paciente\": \"María de las Mercedes Barrios\",\r\n  \"cedula\": \"123456789\",\r\n  \"direccion\": \"Dirección del paciente\",\r\n  \"telefono\": \"1234567890\",\r\n  \"fecha_nacimiento\": \"2023-06-25\",\r\n  \"lugar_nacimiento\": \"BQTO\",\r\n  \"estado_civil\": \"Casada\",\r\n  \"nacionalidad\": \"Venezolana\",\r\n  \"antecedentes\": \"bastantes\",\r\n  \"sexo\": \"femenino\",\r\n  \"email\": \"correo@example.com\",\r\n  \"borrado\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario Actual",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NjU4NDQwOX0.WYfU3-prL3SWbxbqI3WG95k2KRr5z_Y-0n_aEnhMmEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Usuario Actual",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NjU4NDQwOX0.WYfU3-prL3SWbxbqI3WG95k2KRr5z_Y-0n_aEnhMmEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/current",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modificar Paciente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4OTAxODM4N30.2r1pRxJ9l_0f6AN5BQyjcaf1JHWVzJ-SeRhisWWXTmo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"paciente\": \"LAURA ORTEGA\",\r\n    \"direccion\": \"BARQUISIMETO\",\r\n    \"telefono\": \"04245345199\",\r\n    \"fecha_nacimiento\": \"1999-09-18T04:00:00.000+00:00\",\r\n    \"lugar_nacimiento\": \"BARQUISIMETO\",\r\n    \"estado_civil\": \"Casado(a)\",\r\n    \"nacionalidad\": \"Venezolano(a)\",\r\n    \"antecedentes\": \"NINGUNO PERO TODOS A LA VEZ\",\r\n    \"sexo\": \"Femenino\",\r\n    \"email\": \"LAURA@GMAIL.COM\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes/26976713",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes",
+						"26976713"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar Paciente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4ODQxODI1Nn0.Y04gdQNVdjsYPppgTOgEpXSO3Ol1jWWSQ7sbGY_Vo1I",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes/borrar/26976713",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes",
+						"borrar",
+						"26976713"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Paciente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4OTAxODM4N30.2r1pRxJ9l_0f6AN5BQyjcaf1JHWVzJ-SeRhisWWXTmo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes/26976713",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes",
+						"26976713"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Pacientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MDgyOTU4N30.Pd4Ubi-WSPm_qKdX06mCCve64b5aMHqB9-WuEYgxQOo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes/total",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes",
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Consultas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MDgyOTg3OX0.G26lLrl3JiG-U1fC5NqW_ca42e3Mn5fdGNjiJ0MXIT8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas/total",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas",
+						"total"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Total Consultas Este Año",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MDgzMDQ5Mn0.BZzkpb8HMr3jXCVWrfNRV5Y9OphZDviF6Dw58sHazeM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas/total/anual",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas",
+						"total",
+						"anual"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Detalle Consulta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MDc0Mzk4OX0.1faOjGadvTtOl-S57e446TFtU5lsJMuBLSd5xKFqIxI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas/detalle/2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas",
+						"detalle",
+						"2000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Nota Consulta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MDgyMDY2NX0.Jvog0_UPiTjzSkJmUDu0VqFMeM_5HvJh9nQhW16OzQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas/nota/41813",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas",
+						"nota",
+						"41813"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Paciente en Consulta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4OTYyMzg4MH0.bjSYPRaWQ5ht0r2uv79lqrO4jnMxL-nbd2tbPAqhkLs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes/11792730/consulta",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes",
+						"11792730",
+						"consulta"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NTk4ODcyOX0.PvFrsi2GXP00J5bwGjaHuSKCb8fQ8j6oMkF-QAOD-jA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Consultas del Paciente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4OTAyMTgyOH0.yiuuWncBYNzYg7MPy2v9ZzUuuQwSf8ELIAos_tow2JQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas/988906",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas",
+						"988906"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "RXN0ZV9lc19lbF90b2tlbl9zZWNyZXRvLmFkbWlu",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Yuleima Josefina Pérez Pérez\",\r\n    \"password\": \"12345\",\r\n    \"pregunta\": \"¿Color favorito?\",\r\n    \"respuesta\": \"Azul\",\r\n    \"email\": \"yuleima@gmail.com\",\r\n    \"username\": \"yuleima\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/usuarios",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios By Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NDc4NjU1OX0.N4qn1Q3Qh5Lyo3HDqWzgJxnmV4x7xa-W34p4kSTG_fo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuarios By Username",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/usuario/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"usuario",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Usuarios - recuperar clave",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/recuperar_clave/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"recuperar_clave",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar - Contraseña",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"respuesta\": \"12345\",\r\n  \"nuevaClave\": \"171821\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/usuarios/recuperar_clave/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"recuperar_clave",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pacientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY4NTk4ODQwM30.8YbGgWv1mnUaizowTPuDG67IHtp4_XduZe0bpOnGk2s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/pacientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"pacientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consultas del último año",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY5MjA1MzE4OH0.tExW5FJH_8RaoeMn3xIf7UCfK6ilcTZjt9Vi3I3vKpk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/consultas/total/anual/mensual",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"consultas",
+						"total",
+						"anual",
+						"mensual"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

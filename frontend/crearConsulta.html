@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Arla-Inc" />
+    <title>FemiSys - Crear Consulta</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" /> <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css" /> <!-- animation css -->
+    <link rel="stylesheet" href="assets/plugins/pell/pell.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" /> <!-- vendor css -->
+    <link rel="stylesheet" href="assets/plugins/SWAL/sweetalert2.min.css">
+  </head>
+
+  <body>
+    <!--Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!--FIN Loader -->
+    
+    <!--BARRA DE NAVEGACIÓN -->
+    <div id="barra_navegacion"></div>
+    <!--FIN BARRA DE NAVEGACIÓN -->
+
+    <!--BARRA DE NAVEGACIÓN HEADER-->
+    <header
+      class="navbar pcoded-header navbar-expand-lg navbar-light"
+      id="barra_header"
+    ></header>
+    <!--FIN BARRA DE NAVEGACIÓN HEADER-->
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="pcoded-main-container">
+      <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+          <div class="page-header">
+            <div class="page-block">
+              <div class="row align-items-center">
+                <div class="col-md-12">
+                  <div class="page-header-title">
+                    <h3 class="m-b-10">Crear Consulta</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-body">
+            <div class="page-wrapper">
+
+              <div class="row">
+
+                
+                <div class="col-3"></div>
+                <div class="col-6">
+                  <div class="card">
+
+                    <div class="card-block border-bottom">
+                      <div class="row align-items-center justify-content-center">
+                        <div class="col-auto">
+                          <img src="assets/images/user/avatar-5.jpg" alt="foto-paciente">
+                        </div>
+                        <div class="col text-right">
+                          <h3 id="h3_nombre"></h3>
+                          <h5 class="text-c-blue mb-0">Cédula: <span id="span_ci" class="text-muted"></span></h5>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-block">
+
+                      <div class="row align-items-center justify-content-center card-active">
+                        <div class="col-6">
+                          <h6 class="text-center m-b-10" id="h6_numConsulta"><span class="text-muted m-r-5">Esta es mi consulta N°</span>0</h6>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3"></div>
+                
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>Datos de la Consulta</h5>
+                      <hr>
+                      <div class="row">
+                        
+                        <div class="col-md-6">    
+                          <div class="form-group">
+                              <label for="i_fcon" class="form-label">Fecha de la Consulta</label>
+                              <input type="date" id="i_fcon" class="form-control" required />
+                          </div>
+                        </div>
+                       
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label for="i_peso" class="form-label">Peso</label>
+                            <input placeholder="Peso..." value="" type="number" id="i_peso" class="form-control" required />
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <label for="ta_notaEvolutiva" class="form-label">Nota Evolutiva</label>
+                            <textarea rows="1" id="ta_notaEvolutiva" class="form-control" placeholder="Nota evolutiva..." required></textarea>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6 editor-de-texto-crear-consulta">
+
+                          <label  class="form-label mb-2">Recipe</label>
+                          <textarea id="text-recipe"></textarea>
+
+                        </div>
+
+                        <div class="col-md-6 editor-de-texto-crear-consulta">
+
+                        
+                          <label class="form-label mb-2">Indicaciones</label>
+                          <textarea id="text-indicaciones" ></textarea>
+                          
+                        </div>
+
+                        <!--Fin Editor-->
+                          
+                        <div class="boton-ajustes col-md-12 text-right mt-3">
+                          <button id="btn_guardar" type="button" class="btn theme-bg text-white btn-p-g m-0">
+                            Guardar
+                          </button>
+                        </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>     
+      </div>
+    </div>
+    <!-- FIN CONTENEDOR PRINCIPAL -->
+
+    <!-- JS REQUERIDO -->
+    <script src="assets/plugins/SWAL/sweetalert2.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script>
+      var pagina = "crear paciente";
+    </script>
+    <script src="assets/js/barra_navegacion.js"></script>
+    <script src="assets/js/barra_header.js"></script>
+    <script src="assets/plugins/jsPDF/jspdf.umd.min.js"></script>
+    <script src="assets/js/pages/crearConsulta.js"></script>
+    <!-- FIN JS REQUERIDO -->
+    <script>
+      setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+      }, 1000);
+    </script>
+  </body>
+</html>

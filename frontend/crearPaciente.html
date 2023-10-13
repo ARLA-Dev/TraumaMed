@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="author" content="Arla-Inc" />
+  <title>FemiSys - Crear Paciente</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/loader.css">
+  <link rel="stylesheet" href="assets/plugins/SWAL/sweetalert2.min.css">
+</head>
+
+<body>
+  <div class="loader_bg">
+    <div class="loader"></div>
+  </div>
+  
+  <div id="barra_navegacion"></div>
+
+  <header class="navbar pcoded-header navbar-expand-lg navbar-light" id="barra_header"></header>
+
+  <div class="pcoded-main-container">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h3 class="m-b-10">Crear Paciente</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="i_cedula" class="form-label">Cédula</label>
+                          <input placeholder="Cédula..." value="" type="text" id="i_cedula" class="form-control" required />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">    
+                        <div class="form-group">
+                          <label for="i_fnac" class="form-label">Fecha de Nacimiento <span id="span_edad"></span> </label>
+                          <input type="date" id="i_fnac" class="form-control" required max="YYYY-MM-DD" />
+                        </div>
+                      </div>
+                      
+
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="i_nombre" class="form-label">Nombre</label>
+                          <input placeholder="Nombre..." value="" type="text" id="i_nombre" class="form-control" required />
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6">    
+                        <div class="form-group">
+                          <label for="i_apellido" class="form-label">Apellido</label>
+                          <input placeholder="Apellido..." value="" type="text" id="i_apellido" class="form-control" required />
+                        </div>
+                      </div>
+                     
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="s_nacionalidad" class="form-label">Nacionalidad</label>
+                          <select id="s_nacionalidad" class="form-control">
+                            <option>Venezolana</option>
+                            <option>Extranjera</option>
+                          </select>
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="i_lnac" class="form-label">Lugar de Nacimiento</label>
+                          <input placeholder="Lugar de Nacimiento..." value="" type="text" id="i_lnac" class="form-control" required />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">    
+                        <div class="form-group">
+                          <label for="i_direccion" class="form-label">Dirección</label>
+                          <input placeholder="Dirección..." value="" type="text" id="i_direccion" class="form-control" required />
+                        </div>
+                      </div>
+                     
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="i_telefono" class="form-label">Télefono</label>
+                          <input placeholder="Télefono..." value="" type="tel" id="i_telefono" class="form-control" required />
+                        </div>
+                      </div>
+                      
+                      <div class="col-md-6">    
+                        <div class="form-group">
+                          <label for="i_direccion" class="form-label">Correo Electronico</label>
+                          <input placeholder="Email..." value="" type="mail" id="i_email" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">    
+                        <div class="form-group">
+                          <label for="s_edocivil" class="form-label">Estado Civil</label>
+                          <select id="s_edocivil" class="form-control">
+                            <option>Soltera</option>
+                            <option>Casada</option>
+                            <option>Viuda</option>
+                            <option>Divorciada</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">    
+                        <div class="form-group">
+                          <label for="ta_antecedentes" class="form-label">Antecedentes</label>
+                          <textarea rows="1" id="ta_antecedentes" class="form-control" placeholder="Antecedentes..."></textarea>
+                        </div>
+                      </div>
+                     
+                      <div class="boton-ajustes col-md-12 text-right">
+                        <button type="button" id="btn_guardar" class="btn theme-bg text-white btn-p-g m-0">
+                          Guardar
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/plugins/SWAL/sweetalert2.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/vendor-all.min.js"></script>
+  <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/pcoded.min.js"></script>
+  <script>
+    var pagina = "crear paciente";
+  </script>
+  <script src="assets/js/barra_navegacion.js"></script>
+  <script src="assets/js/barra_header.js"></script>
+  <script src="assets/js/pages/crearPacientes.js"></script>
+  <script>
+    setTimeout(function(){
+      $('.loader_bg').fadeToggle();
+    }, 1500);
+  </script>
+</body>
+</html>

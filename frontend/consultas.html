@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Arla-Inc" />
+    <title>FemiSys - Consultas</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css" /> <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css"/> <!-- animation css -->
+    <link rel="stylesheet" href="assets/css/style.css" /> <!-- vendor css -->
+    <link rel="stylesheet" href="assets/css/loader.css">
+  </head>
+
+  <body>
+    <!--Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!--FIN Loader -->
+    
+    <!--BARRA DE NAVEGACIÓN -->
+    <div id="barra_navegacion"></div>
+    <!--FIN BARRA DE NAVEGACIÓN -->
+
+    <!--BARRA DE NAVEGACIÓN HEADER-->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light" id="barra_header"></header>
+    <!--FIN BARRA DE NAVEGACIÓN HEADER-->
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="pcoded-main-container">
+
+      <div class="pcoded-content">
+        <div class="pcoded-inner-content">
+          <div class="page-header">
+            <div class="page-block">
+              <div class="row align-items-center">
+                <div class="col-md-12">
+                  <div class="page-header-title">
+                    <h3 class="m-b-10">Consultas</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-body">
+            <div class="page-wrapper">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+              
+                    <!--PRIMERA FILA-->
+              
+                    <div class="col-md-6 mt-3">
+                      <div class="form-group">
+                        <label>Filtrar:</label>
+                        <div class="mb-3 input-group">
+                          <input aria-label="Text input with checkbox" class="form-control" placeholder="Consulta..." type="text">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"
+                              style="width: 54.5px; text-align: center; padding: 0; display: flex; align-items: center; justify-content: center;">
+                              <i class="fa fa-search"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!--FIN PRIMERA FILA-->
+              
+                    <!--TABLA DE CONSULTAS-->
+                    <div class="col-md-12">
+                      <div class="table-responsive">
+                        <table class="table table-hover text-center">
+                          <thead>
+                            <tr>
+                              <th>#</th>
+                              <th>Cédula</th>
+                              <th>Nombre Completo</th>
+                              <th>Peso (KG)</th>
+                              <th>Fecha de la Consulta</th>
+                              <th>Nota Evolutiva</th>
+                              <th>Documentos</th>
+                            </tr>
+                          </thead>
+                          <tbody></tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--FIN TABLA DE CONSULTAS-->
+
+                <div class="pagination-container-wrapper mt-4">
+                  <div class="pagination-container">
+                    <ul class="pagination pagination-sm flex-wrap justify-content-center align-content-center"></ul>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- FIN CONTENEDOR PRINCIPAL -->
+
+    <!-- Modal Nota evolutiva -->
+    <div class="modal" tabindex="-1" id="modalNota">
+      <div class="modal-body">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Nota Evolutiva</h5>
+            <button type="button" class="btn bg-transparent border-0 btn-close" data-bs-dismiss="modal"><i class="fa fa-times" style="font-size: 30px; color: #B22222;"></i></button>
+          </div>
+    
+          <div class="modal-body container text-center">
+    
+            <div class="row">
+    
+              <div class="col-12">
+    
+                <div class="card container text-center" style="border: 1px solid black !important;">
+    
+                  <div class="card-body">
+                    <h5 class="card-title">Nota Evolutiva</h5>
+                    <p class="nota-modal"></p>
+                  </div>
+    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <!-- Modal Documentos -->
+    <div class="modal" tabindex="-1" id="modalDocumentos">
+      <div class="modal-body">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Documentos</h5>
+            <button type="button" class="btn bg-transparent border-0 btn-close" data-bs-dismiss="modal"><i class="fa fa-times" style="font-size: 30px; color: #B22222;"></i></button>
+          </div>
+    
+          <div class="modal-body container text-center">
+    
+            <div class="row">
+    
+              <div class="col-6">
+    
+                <div class="card container text-center" style="border: 1px solid black !important;">
+    
+                  <div class="card-body">
+                    <h5 class="card-title">Récipe</h5>
+                    <p class="recipe-modal"></p>
+                  </div>
+    
+                </div>
+              </div>
+    
+              <div class="col-6">
+    
+                <div class="card container text-center" style="border: 1px solid black !important;">
+    
+                  <div class="card-body">
+                    <h5 class="card-title">Indicaciones</h5>
+                    <p class="indicaciones-modal"></p>
+                  </div>
+    
+                </div>
+              </div>
+    
+            </div>
+          </div>
+    
+          <div class="modal-footer d-flex flex-0 justify-content-center align-content-center">
+            <button id="btnImprimir" type="button" class="btn theme-bgy text-white btn-p-e" data-bs-dismiss="modal">Imprimir</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- JS REQUERIDO -->
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script>var pagina = "consultas";</script>
+    <script src="assets/js/barra_navegacion.js"></script>
+    <script src="assets/js/barra_header.js"></script>
+    <script src="assets/plugins/jsPDF/jspdf.umd.min.js"></script>
+    <script src="assets/js/pages/consultas.js"></script>
+    <script>
+      setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+      }, 1000);
+    </script>
+    <!-- FIN JS REQUERIDO -->
+    
+  </body>
+</html>

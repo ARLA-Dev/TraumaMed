@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Arla-Inc" />
+    <title>FemiSys - Recuperar Contraseña</title>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon" /> <!-- Favicon icon -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css"/> <!-- fontawesome icon -->
+    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css"/> <!-- animation css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/recuperar_clave.css">
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <link rel="stylesheet" href="assets/plugins/SWAL/sweetalert2.min.css">
+  </head>
+
+  <body>
+    <!--Loader -->
+    <div class="loader_bg">
+      <div class="loader"></div>
+    </div>
+    <!--FIN Loader -->
+    
+    <div class="auth-wrapper">
+      <div class="auth-content">
+        <div class="auth-bg">
+          <span class="r"></span>
+          <span class="r s"></span>
+          <span class="r s"></span>
+          <span class="r"></span>
+        </div>
+        <div class="card">
+          <div class="card-body text-center">
+            <div class="mb-4">
+              <i class="feather icon-unlock auth-icon"></i>
+            </div>
+
+            <h3 class="mb-4">Recuperar Contraseña</h3>
+
+            <form method="get">
+
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Usuario" id="username" required />
+                <div class="input-group-append contenedor-lupa">
+                  <button class="btn btn-primary" type="button" id="lupa" ><i class="feather icon-search lupa"></i></button>
+                </div>
+              </div>
+
+            </form>
+
+            <form method="post" class="d-none">
+
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Pregunta de Seguridad"
+                  id="pregunta"
+                  required disabled
+                />
+              </div>
+
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Respuesta de Seguridad"
+                  id="respuesta"
+                  required
+                />
+              </div>
+
+              <div class="input-group mb-4">
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Contraseña"
+                  id="password"
+                  required
+                />
+              </div>
+
+              <button class="btn btn-primary mb-4 shadow-2" type="button" id="recuperar_btn">Recuperar</button>
+
+            </form>
+
+            <p class="mb-0 text-muted">
+              ¿Recordaste tu Contraseña? <a href="login.html">Login</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Required Js -->
+    <script src="assets/plugins/SWAL/sweetalert2.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/pages/recuperar_clave.js"></script>
+    <script src="assets/js/vendor-all.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/pcoded.min.js"></script>
+    <script>
+      setTimeout(function(){
+        $('.loader_bg').fadeToggle();
+      }, 1000);
+    </script>
+  </body>
+</html>
